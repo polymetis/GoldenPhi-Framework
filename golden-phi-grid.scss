@@ -1,0 +1,26 @@
+/* Grid System based on http://videos.fivesimplesteps.com/designing-grid-systems/ and
+*  with 320 and Up in mind http://stuffandnonsense.co.uk/projects/320andup/ *************/
+
+$margin-width: 17px !default;
+$column-width: 96px !default;
+$gutter-width: 17px !default; 
+
+
+@mixin field($field-size, $site-size) {
+  $field-width:($column-width * $field-size) + ($gutter-width * ($field-size - 1));
+  $site-width:($margin-width * 2)+ ($column-width * $site-size) + ($gutter-width * ($site-size - 1));
+  width: percentage($field-width / $site-width);
+}
+
+@function golden-phi-offset($field-size, $site-size){
+	@return percentage((($column-width * $field-size) + ($gutter-width * $field-size)) / (($margin-width * 2)+ ($column-width * $site-size) + ($gutter-width * ($site-size - 1))));
+	}
+
+@function margin-percentage($site-size){
+	@return percentage($margin-width / (($margin-width * 2) + ($column-width * $site-size) + ($gutter-width * ($site-size - 1))));
+	 }
+
+@function gutter-percentage($site-size){
+	@return percentage($gutter-width / (($margin-width * 2) + ($column-width * $site-size) + ($gutter-width * ($site-size - 1))));
+	 }	
+	 

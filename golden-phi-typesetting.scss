@@ -1,0 +1,66 @@
+/* 4. Typesetting ===================================================================== */
+/* Type with Meaning == http://bit.ly/ruBhbK === http://bit.ly/tNXR9n ================= */
+
+@mixin font-size($em) {
+  font-size:$em * 16px;
+  font-size:$em + rem;
+}
+
+h1 { 
+	margin-bottom : .618em;
+	@include font-size(2.618); 
+	line-height : 1.2; }
+
+h2,
+section h1,
+article h1 { 
+	margin-bottom : .618em;
+	@include font-size(2.292);  
+	line-height : 1.2; }
+
+h3,
+section h2,
+article h2 { 
+	margin-bottom : 1em;
+	@include font-size(1.618); 
+	line-height : 1.3; }
+
+h4,
+section h3,
+article h3 { 
+	margin-bottom : 1.618em;
+	@include font-size(1.417);  
+	line-height : 1.25; }
+
+h5,
+section h4,
+article h4 { 
+	margin-bottom : 2.292em;
+	@include font-size(1);   }
+
+h6,
+section h5,
+article h5 { 
+	@include font-size(1); }
+
+section h6,
+article h6 {
+	@include font-size(.875);  }
+	
+/* Default Hyphenation */ 
+
+p {
+/* http://www.w3.org/TR/css3-text/#hyphenation */
+-webkit-hyphens : auto;
+-webkit-hyphenate-character : "\2010";
+-webkit-hyphenate-limit-after : 1;
+-webkit-hyphenate-limit-before : 3;
+-moz-hyphens : auto; }
+
+/* Justification */
+
+.right-justify {
+	text-align: right;}
+
+.centre-justify {
+    text-align: center;}

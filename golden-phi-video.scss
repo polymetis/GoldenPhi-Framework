@@ -1,0 +1,46 @@
+/* Figure for video === http://bit.ly/vUsPFk ===========================================*/
+
+.four-three, .widescreen{
+	margin: 1.618em auto;}
+
+/* 16 by 9 format eg Most current formats */
+.theatre {
+	margin: 0 0 0 0;
+	background: rgb(0,0,0);
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	text-shadow: none;}
+
+.theatre iframe,
+.theatre img,
+.theatre object,
+.theatre video,
+.theatre embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;}
+
+/* 4 by 3 format eg Old Movies and Television */
+.theatre-43{
+	margin: 0 0 0 0;
+	background: rgb(0,0,0);
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+	text-shadow: none;}	
+	
+.theatre-43 iframe,
+.theatre-43 img,
+.theatre-43 object,
+.theatre-43 video,
+.theatre-43 embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;}

@@ -1,0 +1,409 @@
+/*
+ * Golden φ Boilerplate
+ *
+ * Not being happy with defaults, apparently, I decided to Blend the HTML5 ✰
+ * Boilerplate, with 320 and Up, and a dash of idiosyncratic views on how content 
+ * should be treated. 
+ *
+ * The Usual Suspects
+ *	HTML5 ✰ Boilerplate: http://html5boilerplate.com/ 
+ *	320 and Up  http://stuffandnonsense.co.uk/projects/320andup/ 
+ *
+ * = Index =
+ * 1. HTML5 display definitions
+ * 2. Root
+ * 3. Links
+ * 4. Typesetting
+ * 5. Typography
+ * 6. Lists 
+ * 7. Figures, images, & media
+ * 8. Forms
+ * 9. Tables
+ *10. Custom Styles
+ *11. Media Queries 
+ *12. Non-Semantic Helper Classes
+ *13. Print
+ *14. Design Process Only 
+*/
+
+/* 1. Colour Defaults ==================================================================*/
+$highlight-colour: #fe57a1 !default; /* hot pink in honour of HTML5 Boilerplate*/
+$highlight-text-colour: #fff !default; /* white */
+
+$background-colour: #fdf6e3 !default;
+$text-colour: #222 !default; 
+
+$link-colour: #00e !default;
+$link-visited-colour: $link-colour !default;
+$link-hover-colour: #06e !default;
+
+
+/*2. Font Defaults =====================================================================*/
+
+$serif: !default;
+$sans-serif: !default; 
+$monospaced: !default;
+
+
+/* 1. HTML5 display definitions ========================================================*/
+
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+nav, 
+section { 
+	display: block; }
+
+audio, 
+canvas, 
+video { 
+	display: inline-block; 
+	*display: inline; 
+	*zoom: 1; }
+	
+audio:not([controls]) { 
+	display: none; }
+
+[hidden] {
+	display: none; }
+
+
+/* 2. Root =============================================================================*/
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ * 4.  http://files.christophzillgens.com/webkit-font-smoothing.html
+ */
+
+html { 
+	font-size: 100%; /* 1 */
+	overflow-y: scroll; /* 2 */
+	-webkit-font-smoothing: antialiased; /* 4 */
+	-webkit-overflow-scrolling : touch; 
+	-webkit-tap-highlight-color: $highlightcolour; 
+	-webkit-text-size-adjust: 100% /* 3 */;
+	-ms-text-size-adjust: 100%; /* 3 */}
+
+body { 
+	margin: 0;
+	padding: 0;
+	font-size: 1em; 
+	line-height: 1.4; }
+
+body, 
+button, 
+input, 
+select, 
+textarea { 
+	font-family: $sans-serif;
+	color: $textcolour;
+	background-color: $background-colour;}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-webkit-selection { 
+	background: $highlightcolour; 
+	color: $highlighttextcolour; 
+	text-shadow: none; }
+	
+::-moz-selection { 
+	background: $highlightcolour; 
+	color: $highlighttextcolour;  
+	text-shadow: none; }
+	
+::selection { 
+	background: $highlightcolour;
+	color: $highlighttextcolour; 
+	text-shadow: none; }
+
+
+/* 3. Links ============================================================================*/
+
+a { 
+	color: $link-colour; }
+	
+a:visited { 
+	color: $link-visited-colour; }
+
+a:hover { 
+color: $link-hover-colour; }
+
+a:focus { 
+outline: thin dotted; }
+
+// Improve readability when focused and hovered in all browsers: h5bp.com/h 
+a:hover, 
+a:active { 
+	outline: 0; }
+
+
+/* 5. Typography =======================================================================*/
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+
+abbr[title] { 
+	border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to 'bolder' in FF3/4, S4/5, Chrome
+*/
+
+b, 
+strong { 
+	font-weight: bold; }
+/*
+ * Better font smoothing for Mac
+ * http://files.christophzillgens.com/webkit-font-smoothing.html
+*/
+
+i,
+em {
+	-webkit-font-smoothing: subpixel-antialiased;}
+
+blockquote { 
+	margin: 1em .618em; }
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+ 
+dfn { 
+	font-style: italic; }
+
+hr { 
+	display: block; 
+	height: 1px; 
+	border: 0; 
+	border-top: 1px solid #ccc; 
+	margin: 1em 0; 
+	padding: 0; }
+
+ins { 
+	background: #ff9; 
+	color: #000; 
+	text-decoration: none; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+
+mark { 
+	background: #ff0; 
+	color: #000; 
+	font-style: italic; 
+	font-weight: bold; }
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre, 
+code, 
+kbd, 
+samp { 
+	font-family: monospace, serif; _font-family: 'courier new', monospace; 
+	font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+
+pre { 
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word; }
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+
+/* 1 */
+q { 
+	quotes: none; }
+
+/* 2 */ 
+q:before, 
+q:after { 
+	content: ""; content: none; }
+
+small { 
+	font-size: 75%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */ 
+sub, sup { 
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; }
+	
+sup { 
+	top: -0.5em; }
+
+sub { 
+	bottom: -0.25em; }
+
+
+/* 6. Lists ============================================================================*/
+
+ul, ol { 
+	margin: 1em 0;
+	padding: 0 0 0 40px; }
+
+dd {
+	margin: 0 0 0 40px; }
+nav ul, 
+nav ol { 
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; }
+
+
+/* 8. Forms =========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+
+form {
+	margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding
+ */
+
+fieldset { 
+	border: 0; 
+	margin: 0; 
+	padding: 0; }
+
+// Indicate that 'label' will shift focus to the associated form element 
+label { 
+	cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { 
+	border: 0; /* 1 */
+	*margin-left: -7px; /* 2 */
+	padding: 0; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, 
+input, 
+select, 
+textarea { 
+	font-size: 100%; /* 1 */
+	margin: 0; /* 2 */
+	vertical-align: baseline; /* 3 */
+	*vertical-align: middle; } /* 3 */
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, 
+input { 
+	line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+	cursor: pointer; /* 1 */ 
+	-webkit-appearance: button; /* 2 */ 
+	*overflow: visible; /* 3 */ } 
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Addresses excess padding in IE8/9
+ */
+
+input[type="checkbox"], 
+input[type="radio"] { 
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */} 
+	
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+
+input[type="search"] { 
+	-webkit-appearance: textfield; /* 1 */ 
+	-moz-box-sizing: content-box; 
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box; }
+
+/*
+ * Corrects inner padding displayed oddly in S5, Chrome on OSX
+ */
+
+input[type="search"]::-webkit-search-decoration { 
+	-webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { 
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+	resize: vertical; }
+
+/* Colors for form validity */
+input:valid, 
+textarea:valid { 
+	}
+input:invalid, 
+textarea:invalid { 
+	background-color: #f0dddd; }
+
+
+/* 9. Tables ========================================================================== */
+
+/* 
+ * Remove most spacing between table cells
+ */
+
+table { 
+	border-collapse: collapse; 
+	border-spacing: 0; }
+	
+td { 
+	vertical-align: top; }

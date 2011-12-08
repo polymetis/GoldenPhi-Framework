@@ -1,0 +1,33 @@
+/* 7. Figures, images, & media =========================================================*/
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e
+ */
+
+img {
+	max-width: 100%; 	
+	border: 0; /* 2 */
+	-ms-interpolation-mode: bicubic; /* 1 */
+	vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { 
+	overflow: hidden; }
+
+figure { 
+	margin: 0; }
+
+figure img,
+figure object,
+figure iframe,
+figure embed {
+	margin-bottom : .75em;
+	max-width : 100%; }
+
+figcaption {
+	display: block;
+	font-weight : normal; }	
+	
