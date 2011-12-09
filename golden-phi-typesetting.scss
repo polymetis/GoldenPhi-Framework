@@ -6,6 +6,12 @@
   font-size:$em + rem;
 }
 
+/*2. Font Defaults =====================================================================*/
+
+$serif: !default;
+$sans-serif: !default; 
+$monospaced: !default;
+
 h1 { 
 	margin-bottom : .618em;
 	@include font-size(2.618); 
