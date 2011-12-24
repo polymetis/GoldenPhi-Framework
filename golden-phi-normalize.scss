@@ -37,6 +37,11 @@ $link-colour: #00e !default;
 $link-visited-colour: $link-colour !default;
 $link-hover-colour: #06e !default;
 
+/* 2. Font Defaults ====================================================================*/
+$serif: serif !default; 
+$sans-serif: sans-serif !default; 
+$monospaced: monospace !default; 
+
 
 
 /* 1. HTML5 display definitions ========================================================*/
@@ -81,7 +86,7 @@ html {
 	overflow-y: scroll; /* 2 */
 	-webkit-font-smoothing: antialiased; /* 4 */
 	-webkit-overflow-scrolling : touch; 
-	-webkit-tap-highlight-color: $highlightcolour; 
+	-webkit-tap-highlight-color: $highlight-colour; 
 	-webkit-text-size-adjust: 100% /* 3 */;
 	-ms-text-size-adjust: 100%; /* 3 */}
 
@@ -97,7 +102,7 @@ input,
 select, 
 textarea { 
 	font-family: $sans-serif;
-	color: $textcolour;
+	color: $text-colour;
 	background-color: $background-colour;}
 
 /*
@@ -106,18 +111,18 @@ textarea {
  * Also: hot pink! (or customize the background color to match your design)
  */
 ::-webkit-selection { 
-	background: $highlightcolour; 
-	color: $highlighttextcolour; 
+	background: $highlight-colour; 
+	color: $highlight-text-colour; 
 	text-shadow: none; }
 	
 ::-moz-selection { 
-	background: $highlightcolour; 
-	color: $highlighttextcolour;  
+	background: $highlight-colour; 
+	color: $highlight-text-colour;  
 	text-shadow: none; }
 	
 ::selection { 
-	background: $highlightcolour;
-	color: $highlighttextcolour; 
+	background: $highlight-colour;
+	color: $highlight-text-colour; 
 	text-shadow: none; }
 
 
