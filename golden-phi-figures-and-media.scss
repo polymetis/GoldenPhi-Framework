@@ -31,3 +31,18 @@ figcaption {
 	display: block;
 	font-weight : normal; }	
 	
+.floatright{
+	display: block;
+	float: right;
+	margin-left: 1em;}
+
+.floatleft{
+	display: block;
+	float: left;
+	margin-right: 1em;}
+
+.centre {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;}	
+	
