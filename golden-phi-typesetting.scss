@@ -68,6 +68,9 @@ font-family: $serif;
 -webkit-hyphenate-limit-before : 3;
 -moz-hyphens : auto; }
 
+p:not(:first-of-type) { 
+	text-indent: 1em }
+
 /* Justification */
 
 .right-justify {
