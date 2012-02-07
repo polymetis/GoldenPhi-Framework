@@ -76,26 +76,19 @@ audio:not([controls]) {
 
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Force vertical scrollbar in non-IE
  * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  * 4.  http://files.christophzillgens.com/webkit-font-smoothing.html
  */
 
 html { 
 	font-size: 100%; /* 1 */
-	overflow-y: scroll; /* 2 */
 	-webkit-font-smoothing: antialiased; /* 4 */
 	-webkit-overflow-scrolling : touch; 
 	-webkit-tap-highlight-color: $highlight-colour; 
-	-webkit-text-size-adjust: 100% /* 3 */;
+	-webkit-text-size-adjust: 100%; /* 3 */
 	-ms-text-size-adjust: 100%; /* 3 */}
 
-body { 
-	margin: 0;
-	padding: 0;
-	font-size: 1em; 
-	line-height: 1.4; }
-
+html,
 body, 
 button, 
 input, 
@@ -104,6 +97,12 @@ textarea {
 	font-family: $sans-serif;
 	color: $text-colour;
 	background-color: $background-colour;}
+
+body { 
+	margin: 0;
+	padding: 0;
+	font-size: 1em; 
+	line-height: 1.4; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -299,7 +298,8 @@ label {
 legend { 
 	border: 0; /* 1 */
 	*margin-left: -7px; /* 2 */
-	padding: 0; }
+	padding: 0; 
+	white-space: normal; }
 
 /*
  * 1. Correct font-size not inheriting in all browsers
@@ -339,6 +339,14 @@ input[type="submit"] {
 	*overflow: visible; /* 3 */ } 
 
 /*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], 
+input[disabled] { 
+	cursor: default; }
+
+/*
  * 1. Addresses box sizing set to content-box in IE8/9
  * 2. Addresses excess padding in IE8/9
  */
@@ -346,7 +354,9 @@ input[type="submit"] {
 input[type="checkbox"], 
 input[type="radio"] { 
 	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */} 
+	padding: 0; /* 2 */
+	*width: 13px; 
+	*height: 13px; } 
 	
 /*
  * 1. Addresses appearance set to searchfield in S5, Chrome
@@ -363,7 +373,8 @@ input[type="search"] {
  * Corrects inner padding displayed oddly in S5, Chrome on OSX
  */
 
-input[type="search"]::-webkit-search-decoration { 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button { 
 	-webkit-appearance: none; }
 
 /*
